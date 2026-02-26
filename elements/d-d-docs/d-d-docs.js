@@ -210,10 +210,10 @@ class DDDocs extends DDD {
       >
         ${Object.keys(ApplicationAttributeData.primary).map(
           (key) => html`
-            <simple-cta data-primary="${key}" data-pulse
+            <simple-cta data-primary="${key}" data-pulse="1"
               >Primary-${key}</simple-cta
             >
-            <simple-cta data-primary="${key}" data-pulse light
+            <simple-cta data-primary="${key}" data-pulse="1" light
               >Primary-${key}</simple-cta
             >
           `,
@@ -2003,10 +2003,15 @@ class DDDocs extends DDD {
         <pre>
     Here is an    example of a    block using the    'pre'    tag on it's    own</pre
         >
-        <p>Here is a good example of some <mark>Highlighted Text</mark></p>
+        <p>
+          Here is a good example of some
+          <mark>Highlighted Text</mark>
+        </p>
         <p>
           Here is an example of an abbreviation:
-          <abbr title="Pennsylvania State University">Penn State</abbr>
+          <abbr title="Pennsylvania State University" data-primary="2"
+            >Penn State</abbr
+          >
         </p>
         <ul class="ddd-link-list">
           <li><a href="#">All Degrees</a></li>
